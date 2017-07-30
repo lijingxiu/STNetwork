@@ -211,7 +211,17 @@
     if (block) {
         request = [requestSerializer multipartFormRequestWithMethod:method URLString:URLString parameters:parameters constructingBodyWithBlock:block error:error];
     } else {
-        request = [requestSerializer requestWithMethod:method URLString:URLString parameters:parameters error:error];
+        if([parameters isKindOfClass:[NSData class]])
+        {
+            request = [requestSerializer requestWithMethod:method URLString:URLString parameters:nil error:error];
+            [request setHTTPBody:parameters];
+
+        }
+        else
+        {
+            request = [requestSerializer requestWithMethod:method URLString:URLString parameters:parameters error:error];
+
+        }
     }
     
     __block NSURLSessionDataTask *dataTask = nil;
