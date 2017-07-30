@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
 s.name         = 'STNetwork'
-    s.version      = '1.0.4'
+    s.version      = '1.0.5'
     s.summary      = 'iOS'
     s.homepage     = 'https://github.com/haivy/STNetwork'
     s.description  = <<-DESC
