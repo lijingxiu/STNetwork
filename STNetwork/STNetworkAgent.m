@@ -60,7 +60,7 @@
 
 - (AFJSONResponseSerializer *)jsonResponseSerializer
 {
-    if (_jsonResponseSerializer) {
+    if (!_jsonResponseSerializer) {
         _jsonResponseSerializer = [AFJSONResponseSerializer serializer];
         _jsonResponseSerializer.acceptableStatusCodes = _allStatusCodes;
     }
@@ -69,7 +69,7 @@
 
 - (AFXMLParserResponseSerializer *)xmlParserResponseSerialzier
 {
-    if (_xmlParserResponseSerialzier) {
+    if (!_xmlParserResponseSerialzier) {
         _xmlParserResponseSerialzier = [AFXMLParserResponseSerializer serializer];
         _xmlParserResponseSerialzier.acceptableStatusCodes = _allStatusCodes;
     }

@@ -10,6 +10,7 @@
 
 @implementation TestRequest
 
+//处理resultStr
 -(void)setResultStr:(NSString *)resultStr
 {
     if (self.requestType == LoginType) {
