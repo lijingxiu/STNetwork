@@ -16,6 +16,7 @@
     if (self.requestType == LoginType) {
         self.resultObject = @"fdsafd";
     }
+    self.responseSerializerType = STResponseSerializerTypeJSON;
     [super setResultStr:resultStr];
 }
 @end
